@@ -1,9 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import './App.css';
-import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Routes, Route} from "react-router-dom";
 import HomePage from './Components/HomePage/HomePage';
 import CaverPage from './Components/CaverPage/CaverPage';
 import Papa from "papaparse";
+import SinglPage from './Components/singlPage/SinglPage';
 function Notfound() {
   return (
     <div>
@@ -51,8 +52,8 @@ class App extends Component {
   }
   render() {
     const { songs, isLoading } = this.state
-    if (songs.length == 0) {
-      return  <h2>loading</h2>
+    if (songs.length === 0) {
+      return  null
     }
     console.log(songs);
     return (
@@ -61,7 +62,7 @@ class App extends Component {
           <Routes>
             <Route exact path="/" element={<HomePage />} />
             <Route path="/cavers" element={<CaverPage songs={songs} isLoading={isLoading} />} />
-            {/* <Route path="/cavers/:id" element={<SinglOne songs = {this.state.songs} />} /> */}
+            <Route path="/cavers/:id" element={<SinglPage songs = {songs} />} />
             <Route path="*" element={<Notfound />} />
           </Routes>
         </Router>
