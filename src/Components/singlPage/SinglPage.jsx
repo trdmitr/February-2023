@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
-// import { withRouter } from "react-router";
 function withParams(Component) {
   return (props) => <Component {...props} params={useParams()} />;
 }
