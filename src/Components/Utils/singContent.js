@@ -1,14 +1,41 @@
-// import React, { Component }  from 'react';
-// import React, {useCallback} from 'react';
-// import {useNavigate} from 'react-router-dom';
+import React, { Component }  from 'react';
+import ReactPlayer from "react-player";
+import classes from "../CaverPage/CaverPage.module.css"
+export const audioSource = (linkAuidio, linkName) => {
+    return (
+      <div>
+        <p>{linkName}</p>
+        <audio controls className={linkAuidio ? '' : classes.mediaHidden}
+          src={linkAuidio} type="audio/mpeg" />
+      </div>
+    )
+  }
 
-// export default function StackOverflowExample() {
-//     const navigate = useNavigate();
-//     const handleOnClick = () => navigate(`/cavers/${song.id}`);
+  export const videoSource = (linkVideo, linkName) => {
+    return (
+        <div>
+    <p>{linkName}</p>
+    {linkVideo.includes('youtu.be') ? <ReactPlayer className={linkVideo ? '' : classes.mediaHidden} id={classes.videoFrame} url={linkVideo} controls={true} /> 
+    :  <video className={[classes.videoBlock, linkVideo ? '' : classes.mediaHidden].join(' ')} src={linkVideo} controls={true} type="video/mp4" ></video>}
+    </div>
+    )
+  }
+// export const playList = (propSong) => {
 //   return (
-//     <button type="button" onClick={handleOnClick}>
-//       Go home
-//     </button>
-//     handleOnClick = () => navigate(`/cavers/${song.id}`);
+//      propSong.length <= 1 ? null : (
+//   <AudioList songs={propSong}></AudioList>)
 //   )
-// }
+ 
+// } 
+
+export const tzitata = (imgLink) => {
+  return (
+    <div className={classes.tziTata}>
+       {
+      imgLink.includes('http') ? <img className={classes.tziImage} src={imgLink} width={80} alt="Цитаты" />
+        : <p>{imgLink}</p>
+    }
+    </div>
+   
+  )
+}
