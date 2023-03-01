@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Player from '../Player/Player';
 import Img from '../UI/Img';
 import "../UI/Mobile.css"
 // import Loader from "../Loader/Loader";
@@ -16,7 +17,7 @@ class CaverPage extends Component {
 
                 <div className={classes.column50}>
                   {isLoading ? <h2>Load...</h2> : console.log("PROPS", songs)}
-                  <h1>CaverPage</h1>
+                  {/* <h1>CaverPage</h1> */}
                   <span><Link to="/">HomePage</Link></span>
                   {songs.map((song, key) => (
                       <Link to={`/cavers/${song.id}`}> 
@@ -31,9 +32,9 @@ class CaverPage extends Component {
                     </div>
                     </Link>
                   ))}
-
+                  
           
-                </div>
+                </div><Player songs = {songs}/>
               </div>
 
             </div>
