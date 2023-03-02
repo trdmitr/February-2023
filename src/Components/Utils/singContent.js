@@ -1,4 +1,4 @@
-import React, { Component }  from 'react';
+import React from 'react';
 import ReactPlayer from "react-player";
 import classes from "../CaverPage/CaverPage.module.css"
 export const audioSource = (linkAuidio, linkName) => {
@@ -32,8 +32,8 @@ export const tzitata = (imgLink) => {
   return (
     <div className={classes.tziTata}>
        {
-      imgLink.includes('http') ? <img className={classes.tziImage} src={imgLink} width={80} alt="Цитаты" />
-        : <p>{imgLink}</p>
+      imgLink.includes('http') ? <img className={classes.tziTata} src={imgLink} width={80} alt="Цитаты" />
+        : <p className={classes.tziTata}>{imgLink}</p>
     }
     </div>
    

@@ -1,25 +1,25 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import {audioSource, tzitata} from "../Utils/singContent"
 import {videoSource} from "../Utils/singContent"
 import classes from "./singlPage.module.css"
 import "../UI/Mobile.css"
-import {playList} from "../Utils/singContent"
+// import {playList} from "../Utils/singContent"
 function withParams(Component) {
   return (props) => <Component {...props} params={useParams()} />;
 }
 class SinglPage extends Component {
 
-  componentDidMount() {
+  // componentDidMount() {
     // const { id } = this.props.match.params;
     // this.fetchData(id);
     // const { id } = this.props.match.params;
-    {console.log("одна страницв", this.props.params.id)}
+    // {console.log("одна страницв", this.props.params.id)}
 
-}
+// }
     render() {
-      const { songs, isLoading } = this.props
+      const { songs} = this.props
       // console.log(songs)
       const singls =  songs.filter(songs => songs.id === this.props.params.id);
       // console.log(singls)
@@ -48,7 +48,7 @@ class SinglPage extends Component {
             {videoSource(song.video3, song.video_name3)}
           </div>
           {tzitata(song.picture)}  
-          <span><Link to="/cavers">cavers</Link></span>                      
+          <Link to="/cavers"><button className={classes.bTnSing}>Назад</button></Link>                    
         </div>
           
         )

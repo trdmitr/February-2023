@@ -16,10 +16,10 @@ class CaverPage extends Component {
               <div className={classes.row}>
 
                 <div className={classes.column50}>
-                  {isLoading ? <h2>Load...</h2> : console.log("PROPS", songs)}
+                  {isLoading ? <h2>Load...</h2> : ""}
                   {/* <h1>CaverPage</h1> */}
-                  <span><Link to="/">HomePage</Link></span>
-                  {songs.map((song, key) => (
+                  
+                  {songs.map((song) => (
                       <Link to={`/cavers/${song.id}`}> 
                     <div key={song.id} className={classes.media}>
                     <div className={classes.mediaImage}>
@@ -32,11 +32,10 @@ class CaverPage extends Component {
                     </div>
                     </Link>
                   ))}
-                  
-          
+                 
                 </div><Player songs = {songs}/>
               </div>
-
+              <Link to="/"><button className= {classes.btnHome}>HOME</button></Link>
             </div>
           </div>
           <div className="device-stripe"></div>

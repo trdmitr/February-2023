@@ -2,7 +2,7 @@
     /* background-color: rgba(0, 255, 255, 0.199) !important; */
     text-align: center;
     z-index: 2;
-    /* color: #da3131; */
+    color: var(--colorText);
     font-size: 1em !important;
     margin-top: 3em;
     

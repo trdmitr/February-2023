@@ -5,7 +5,7 @@ import HomePage from './Components/HomePage/HomePage';
 import CaverPage from './Components/CaverPage/CaverPage';
 import Papa from "papaparse";
 import SinglPage from './Components/singlPage/SinglPage';
-import Loader from './Components/Loader/Loader';
+// import Loader from './Components/Loader/Loader';
 function Notfound() {
   return (
     <div>
@@ -63,7 +63,7 @@ class App extends Component {
     this.fetchData();
   }
   render() {
-    const { songs, isLoading, songsEror } = this.state
+    const { songs, isLoading } = this.state
     // if (isLoading) {
     //   return <Loader/>
     // }

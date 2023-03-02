@@ -33,7 +33,7 @@
     width: calc(50% - 1.5em);
     height: auto;
    padding: 2.4em; 
-   /* background-color: #eee; */
+   background-color: #eeeeee7a;
    border-radius: 0.5em;
    box-shadow: 0 8px 15px 0 rgba(0,0,0,0.3), 0 5px 21px 0 rgba(0,0,0,0.18);
 }
@@ -233,20 +233,7 @@
   
   }
   
-  .tziTata {
-    /* position:sticky; */
-    font-size: 1.5em;
-    /* padding: 0.5em;  */
-    /* height: 76rem; */
-      /* margin-top: 10px; */
-      font-size: 2.5em;
-      text-align: center;
-      /* background-color: var(--colorBackgroundAll); */
-      text-shadow: var(--textShadow);
-      /* box-shadow: var(--boxShadow); */
-      /* border-radius: 1em; */
-      /* opacity:70% */
-  }
+
   
   .tziImage {
     border-radius: 1em;
@@ -258,16 +245,18 @@
   .tziTata {
     /* position:sticky; */
     font-size: 0.5em;
-    padding: 0.5em; 
+    /* padding: 0.5em;  */
     /* height: 76rem; */
+    color: var(--colorText);
       margin-top: 10px;
       font-size: 2.5em;
       text-align: center;
-      /* background-color: #444; */
-      text-shadow: var(--textShadow);
-      box-shadow: var(--boxShadow);
-      border-radius: 1em;
+      background-color: #c1c5ec70;
+      /* text-shadow: var(--textShadow); */
+      /* box-shadow: var(--boxShadow); */
+      border-radius: 0.5em;
       /* opacity:70% */
+      
   }
   .tziTata p {
     font-size: 0.5em;
