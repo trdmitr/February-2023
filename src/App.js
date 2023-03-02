@@ -5,6 +5,7 @@ import HomePage from './Components/HomePage/HomePage';
 import CaverPage from './Components/CaverPage/CaverPage';
 import Papa from "papaparse";
 import SinglPage from './Components/singlPage/SinglPage';
+import Loader from './Components/Loader/Loader';
 function Notfound() {
   return (
     <div>
@@ -25,33 +26,48 @@ class App extends Component {
 
   }
   fetchData = () => {
-    this.setState({ isLoading: true });
-    Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vRBQ847ey_0J68AbS-jSJD8LwtsxtFK3tbX5lSoNxhgqwKy6R9gz2ITVOJXzAT-IPkPoNIZBgPcrDC_/pub?output=csv",
+    // this.setState({ isLoading: true });
+    Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vRdRsGjcKM2QQe9uQkh3Xy82BN-KbN7I9x-N8YBEmzW-OmGswsJjHQxvAa67f6XxZWEZEbjL32D9gHE/pub?output=csv",
       {
         download: true,
         header: true,
         worker: true,
         skipEmptyLines: true,
         complete: this.updateData,
+        // complete: function(results) { 
+        //   return (
+        //     this.setState({ ...this.state, songs: results.data })
+        //   )
+          
+        // }.bind(this),
         error: (error) => {
           console.error(error);
-          this.setState(error)
+          // this.setState({songsEror: error.message})
+          // this.setState({ isLoading: true });
         }
+
       }
     );
   }
     updateData = (result) => {
-      // console.log(this.data);
-      const data = result.data
-      this.setState({ ...this.state, songs: data, isLoading: false });
       
+      if(!result) {
+        return null
+      }
+      const data = result.data
+      // console.log(this.data);
+      this.setState({ ...this.state, songs: data });
     }
   
-  componentDidMount() {
+    componentDidMount() {
     this.fetchData();
   }
   render() {
-    const { songs, isLoading } = this.state
+    const { songs, isLoading, songsEror } = this.state
+    // if (isLoading) {
+    //   return <Loader/>
+    // }
+    // isLoading ? <Loader/> : ""
     if (songs.length === 0) {
       return  null
     }
