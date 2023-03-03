@@ -1,13 +1,15 @@
 {
-  "files": {
-    "main.css": "/Kish/static/css/main.60a3e272.css",
-    "main.js": "/Kish/static/js/main.6ed1f7ff.js",
-    "index.html": "/Kish/index.html",
-    "main.60a3e272.css.map": "/Kish/static/css/main.60a3e272.css.map",
-    "main.6ed1f7ff.js.map": "/Kish/static/js/main.6ed1f7ff.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.60a3e272.css",
-    "static/js/main.6ed1f7ff.js"
-  ]
+  "main.css": "/February-2023/static/css/main.38749bbb.chunk.css",
+  "main.js": "/February-2023/static/js/main.26679684.chunk.js",
+  "main.js.map": "/February-2023/static/js/main.26679684.chunk.js.map",
+  "static/css/1.bbaf548f.chunk.css": "/February-2023/static/css/1.bbaf548f.chunk.css",
+  "static/js/1.eb4a1c3d.chunk.js": "/February-2023/static/js/1.eb4a1c3d.chunk.js",
+  "static/js/1.eb4a1c3d.chunk.js.map": "/February-2023/static/js/1.eb4a1c3d.chunk.js.map",
+  "runtime~main.js": "/February-2023/static/js/runtime~main.b8235423.js",
+  "runtime~main.js.map": "/February-2023/static/js/runtime~main.b8235423.js.map",
+  "static/css/main.38749bbb.chunk.css.map": "/February-2023/static/css/main.38749bbb.chunk.css.map",
+  "static/css/1.bbaf548f.chunk.css.map": "/February-2023/static/css/1.bbaf548f.chunk.css.map",
+  "index.html": "/February-2023/index.html",
+  "precache-manifest.a077e4a1288631f6cf00d1bad19a989f.js": "/February-2023/precache-manifest.a077e4a1288631f6cf00d1bad19a989f.js",
+  "service-worker.js": "/February-2023/service-worker.js"
 }
