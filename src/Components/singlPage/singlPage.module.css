@@ -65,7 +65,8 @@
   
   .headerSong {
     text-align: right;
-    font-size: 1.5rem;;
+    font-size: 1.5rem;
+    
     /* padding: 0.2rem 1.3rem; */
     color: var(--colorText);
     /* background-color: var(--colorBackgroundAll); */
@@ -77,9 +78,9 @@
     cursor: pointer;
     padding: 0 1em 0 1em;
   }
-  .headerSong h2 p {
+  .headerSong p {
     margin: 0%;
-    padding: 0 1em 0 1em;
+    /* padding: 0 1em 0 1em; */
   }
   
   .linkTo {
@@ -185,5 +186,5 @@
     /* background-color: #bf6947ba; */
     border-radius: 6%;
     padding: 0.2em;
-    opacity: 50%;
+    opacity: 52%;
   }

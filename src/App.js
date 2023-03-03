@@ -71,7 +71,7 @@ class App extends Component {
     if (songs.length === 0) {
       return  null
     }
-    console.log(songs);
+    // console.log(songs);
     return (
       <Fragment>
         <Router>
